@@ -1,1 +1,8 @@
-
+Origin: Alias20 Repo
+Label: Alias20 Repo
+Suite: stable
+Version: 1.0
+Codename: ios
+Architectures: iphoneos-arm iphoneos-arm64
+Components: main
+Description: FakeSignalBar and other tweaks by alias20
