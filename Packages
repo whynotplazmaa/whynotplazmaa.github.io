@@ -1,12 +1,9 @@
-Package: alias20.fakesignalbar
-Name: FakeSignalBar
-Version: 0.1
+Package: com.whynotplazmaa.fakeclock
+Version: 0.1.0
 Architecture: iphoneos-arm64
-Description: Fake carrier name, signal strength, cellular connections, and more! Motivated by SniperGER's Signal tweak.
-Maintainer: alias20
-Author: alias20
-Section: Tweaks
-Depends: mobilesubstrate (>= 0.9.5000), preferenceloader
-Filename: debs/alias20.fakesignalbar_0.1_iphoneos-arm64.deb
-Size: 15540
-SHA256: 0d29bc13521ca8990184d696f7147cfe3c20c381ae713542684980e57461acbd
+Maintainer: Whynotplazmaa
+Filename: debs/com.whynotplazmaa.fakeclock_0.1.0_iphoneos-arm64.deb
+Size: 3958
+MD5sum: 7955a233753fc8f9334397bfb7c6dff5
+Description: Sets the clock to a custom number.
+Name: FakeClock
