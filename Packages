@@ -4,7 +4,7 @@ Architecture: iphoneos-arm64
 Maintainer: Whynotplazmaa
 Filename: debs/fakeclock.deb
 Section: Tweaks
-Size: 3958
+Size: 3736
 SHA256: 67d210d5aa097448ad009c5365f1da6044963db7472de4f161968bdd921e0a34
 Description: Sets the clock to a custom number.
 Name: FakeClock
