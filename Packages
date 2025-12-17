@@ -1,10 +1,10 @@
 Package: com.whynotplazmaa.fakeclock
-Version: 0.1.0
-Architecture: iphoneos-arm64
+Version: 0.1.1
+Architecture: iphoneos-arm64e
 Maintainer: Whynotplazmaa
-Filename: debs/com.whynotplazmaa.fakeclock_0.1.1-1+debug_iphoneos-arm64.deb
+Filename: debs/com.whynotplazmaa.fakeclock_0.1.1_iphoneos-arm64e.deb
 Section: Tweaks
-Size: 3736
-SHA256: 92249214509c2f20502bee41419614cbd3aec7d6a95313869e671b20d66c378b
-Description: Sets the clock to a custom number.
+Size: 18132
+SHA256: 88495115d192b9a3d1d304b694e288b38b68c7fa93c89ae3a832d1aedff8bace
+Description: Sets the lock screen and status bar clock to a custom number.
 Name: FakeClock
