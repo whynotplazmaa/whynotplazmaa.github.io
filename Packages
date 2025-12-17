@@ -1,1 +1,12 @@
-
+Package: alias20.fakesignalbar
+Name: FakeSignalBar
+Version: 0.1
+Architecture: iphoneos-arm64
+Description: Fake carrier name, signal strength, cellular connections, and more! Motivated by SniperGER's Signal tweak.
+Maintainer: alias20
+Author: alias20
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader
+Filename: debs/alias20.fakesignalbar_0.1_iphoneos-arm64.deb
+Size: 15540
+SHA256: 0d29bc13521ca8990184d696f7147cfe3c20c381ae713542684980e57461acbd
