@@ -3,6 +3,7 @@ Version: 0.1.0
 Architecture: iphoneos-arm64
 Maintainer: Whynotplazmaa
 Filename: debs/com.whynotplazmaa.fakeclock_0.1.0_iphoneos-arm64.deb
+Section: Tweaks
 Size: 3958
 MD5sum: 7955a233753fc8f9334397bfb7c6dff5
 Description: Sets the clock to a custom number.
