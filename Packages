@@ -2,7 +2,7 @@ Package: com.whynotplazmaa.fakeclock
 Version: 0.1.1
 Architecture: iphoneos-arm64e
 Maintainer: Whynotplazmaa
-Filename: debs/com.whynotplazmaa.fakeclock_0.1.1_iphoneos-arm64e.deb
+Filename: debs/com.whynotplazmaa.fakeclock_0.1.1_iphoneos-arm64.deb
 Section: Tweaks
 Size: 18200
 SHA256: 25aa02e86db0cd76efc9345384e58a1b09fef55d6dd3236b390bded9d5d0345a
