@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FakeClock Download</title>
+    <title>Plazma</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="glass-card">
-        <h1>FakeClock</h1>
-        <p class="description">Sets the clock to a custom number.</p>
-        <p class="version">Version: 0.1.0</p>
-        
-        <!-- Direct Link to your .deb file -->
-        <a id="downloadBtn" href="debs/com.whynotplazmaa.fakeclock_0.1.0-1+debug_iphoneos-arm64.deb" download class="btn">
-            Download .deb
-        </a>
-        
-        <div id="status"></div>
-    </div>
+    <header>
+        <h1 id="repo-name">Plazma</h1>
+        <input type="text" id="search" placeholder="Search tweaks..." onkeyup="searchTweaks()">
+    </header>
+
+    <main>
+        <section id="repo-info" class="card">
+            <h2 id="repo-title">Loading Repo...</h2>
+            <p id="repo-desc"></p>
+        </section>
+
+        <div id="tweak-list" class="grid">
+            <!-- Tweaks will be injected here -->
+        </div>
+    </main>
+
     <script src="script.js"></script>
 </body>
 </html>
