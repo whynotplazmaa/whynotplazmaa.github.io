@@ -1,10 +1,32 @@
 Package: com.whynotplazmaa.fakeclock
-Version: 0.1.2
+Version: 0.1.1
 Architecture: iphoneos-arm64
 Maintainer: Whynotplazmaa
+Installed-Size: 184
+Depends: mobilesubstrate, preferenceloader
 Filename: debs/com.whynotplazmaa.fakeclock_0.1.2_iphoneos-arm64.deb
-Section: Tweaks
 Size: 5914
+MD5sum: a591f9e632cb57f9cf848d0b428242b6
+SHA1: 474dad8a1e9941b9f62ed483114338c078daa2f2
 SHA256: 8c59081918858bd2e9159f005d6f1b251938c2fdf734d2d35af408bd54b85f40
+Section: Tweaks
 Description: Sets the lock screen and status bar clock to a custom number.
+Author: Whynotplazmaa
 Name: FakeClock
+
+Package: com.whynotplazmaa.standby
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: whynotplazmaa
+Installed-Size: 424
+Depends: mobilesubstrate, firmware (>= 15.0), preferenceloader
+Filename: debs/com.whynotplazmaa.standby_1.0.0_iphoneos-arm.deb
+Size: 8830
+MD5sum: cc5690eae4f29e5e5c69f90d88552a94
+SHA1: b997359075e3a2e24570a83a7eb9b5a40b993590
+SHA256: 354420fa06c40306d52c4c429a3725712749b6152d41c7f989fd3e01548a68a7
+Section: Tweaks
+Description: iOS 17 style StandBy mode for iPhone 7 Plus.
+Author: whynotplazmaa
+Name: StandBy
+
