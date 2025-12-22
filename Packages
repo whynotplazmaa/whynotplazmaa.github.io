@@ -4,7 +4,7 @@ Architecture: iphoneos-arm64
 Maintainer: Whynotplazmaa
 Installed-Size: 184
 Depends: mobilesubstrate, preferenceloader
-Filename: debs/com.whynotplazmaa.fakeclock_0.1.2_iphoneos-arm64.deb
+Filename: ./debs/com.whynotplazmaa.fakeclock_0.1.2_iphoneos-arm64.deb
 Size: 5914
 MD5sum: a591f9e632cb57f9cf848d0b428242b6
 SHA1: 474dad8a1e9941b9f62ed483114338c078daa2f2
@@ -15,32 +15,16 @@ Author: Whynotplazmaa
 Name: FakeClock
 
 Package: com.whynotplazmaa.standby
-Version: 1.0.0
-Architecture: iphoneos-arm
+Version: 1.0.0-4+debug
+Architecture: iphoneos-arm64
 Maintainer: whynotplazmaa
-Installed-Size: 424
+Installed-Size: 428
 Depends: mobilesubstrate, firmware (>= 15.0), preferenceloader
-Filename: debs/com.whynotplazmaa.standby_1.0.0_iphoneos-arm.deb
-Size: 8830
-MD5sum: cc5690eae4f29e5e5c69f90d88552a94
-SHA1: b997359075e3a2e24570a83a7eb9b5a40b993590
-SHA256: 354420fa06c40306d52c4c429a3725712749b6152d41c7f989fd3e01548a68a7
-Section: Tweaks
-Description: iOS 17 style StandBy mode for iPhone 7 Plus.
-Author: whynotplazmaa
-Name: StandBy
-
-Package: com.whynotplazmaa.standby
-Version: 1.0.0-3+debug
-Architecture: iphoneos-arm
-Maintainer: whynotplazmaa
-Installed-Size: 424
-Depends: mobilesubstrate, firmware (>= 15.0), preferenceloader
-Filename: debs/com.whynotplazmaa.standby_1.0.0-3+debug_iphoneos-arm.deb
-Size: 11180
-MD5sum: 5b60b99ac046a3d7ff3167abe9e16e50
-SHA1: 3d87d2497bbde210bcbf57c4d9e26fbb30f19fa1
-SHA256: c55e72ba7e22fc853fee5f9cec2124d7e95671708938ea7f7454221b3cfd6d0f
+Filename: ./debs/com.whynotplazmaa.standby_1.0.0-4+debug_iphoneos-arm64.deb
+Size: 11652
+MD5sum: ad54743947eb6450520824e1eddc9523
+SHA1: d086bfb43f98d7f642c72a8dd2a2ffd61d268598
+SHA256: f922f84fcf8a2a9e55c71fa4422addb6928853f740569e3cef350b3242f54bea
 Section: Tweaks
 Description: iOS 17 style StandBy mode for iPhone 7 Plus.
 Author: whynotplazmaa
