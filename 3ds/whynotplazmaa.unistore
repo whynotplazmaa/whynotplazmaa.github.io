@@ -1,0 +1,27 @@
+{
+  "storeInfo": {
+    "title": "My Private Repo",
+    "author": "YourName",
+    "description": "Custom 3DS tools",
+    "revision": 1
+  },
+  "apps": [
+    {
+      "title": "Your App Name",
+      "author": "Author Name",
+      "description": "What this app does",
+      "category": "Utility",
+      "version": "1.0.0",
+      "screenshots": [],
+      "systems": ["3DS"],
+      "files": [
+        {
+          "type": "cia",
+          "url": "raw.githubusercontent.com",
+          "output": "sdmc:/cias/app.cia",
+          "install": true
+        }
+      ]
+    }
+  ]
+}
