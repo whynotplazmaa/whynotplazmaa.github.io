@@ -30,3 +30,19 @@ Description: iOS 17 style StandBy mode for iPhone 7 Plus.
 Author: whynotplazmaa
 Name: StandBy
 
+Package: com.whynotplazmaa.standby
+Version: 1.0.0-3+debug
+Architecture: iphoneos-arm
+Maintainer: whynotplazmaa
+Installed-Size: 424
+Depends: mobilesubstrate, firmware (>= 15.0), preferenceloader
+Filename: debs/com.whynotplazmaa.standby_1.0.0-3+debug_iphoneos-arm.deb
+Size: 11180
+MD5sum: 5b60b99ac046a3d7ff3167abe9e16e50
+SHA1: 3d87d2497bbde210bcbf57c4d9e26fbb30f19fa1
+SHA256: c55e72ba7e22fc853fee5f9cec2124d7e95671708938ea7f7454221b3cfd6d0f
+Section: Tweaks
+Description: iOS 17 style StandBy mode for iPhone 7 Plus.
+Author: whynotplazmaa
+Name: StandBy
+
