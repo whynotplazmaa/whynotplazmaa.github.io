@@ -3,28 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>3DS Repo | whynotplazmaa</title>
+    <title>Plazma 3DS</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Using a basic system font for that iOS feel -->
 </head>
 <body>
-
     <div class="container">
-        <header class="repo-header">
-            <h1 class="repo-title">Plazma 3DS</h1>
-            <input type="search" placeholder="Search tweaks..." class="search-bar">
+        <header>
+            <h1 id="repo-name">Plazma 3DS</h1>
+            <input type="text" id="search" placeholder="Search tweaks..." onkeyup="searchTweaks()">
         </header>
 
-        <section class="section-card">
-            <h2>Plazma Repo</h2>
-            <p>whynotplazmaa.github.io/3ds</p>
-        </section>
+        <main>
+            <section id="repo-info" class="card">
+                <h2 id="repo-title">Loading Repo...</h2>
+                <p id="repo-desc"></p>
+            </section>
 
-        <section class="section-card">
-            <h2>Tweaks</h2>
-            <div class="tweak-grid" id="tweak-list">
+            <div id="tweak-list" class="grid">
                 <!-- Tweaks will be injected here by script.js -->
             </div>
-        </section>
+        </main>
     </div>
 
     <script src="script.js"></script>
