@@ -1,0 +1,75 @@
+:root {
+    --pastel-pink: #ffd1dc;
+    --soft-pink: #ffecf1;
+    --dark-pink: #ffafbd;
+    --text-color: #7d5a60;
+    --bg-color: #fff9fa;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, var(--pastel-pink), var(--soft-pink));
+    width: 100%;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0 4px 15px rgba(255, 175, 189, 0.3);
+}
+
+header h1 { margin: 0; font-size: 2.2rem; }
+header p { margin-top: 10px; opacity: 0.8; }
+
+.container {
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.tweak-card {
+    background: white;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    border: 2px solid var(--soft-pink);
+}
+
+.tweak-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--dark-pink);
+}
+
+.tweak-card h3 { margin-top: 0; color: var(--dark-pink); }
+
+.download-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: var(--pastel-pink);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 15px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.download-btn:hover {
+    background-color: var(--dark-pink);
+    color: white;
+}
+
+footer { margin-top: auto; padding: 20px; font-size: 0.9rem; opacity: 0.6; }
