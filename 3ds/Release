@@ -1,0 +1,8 @@
+Origin: Plazma
+Label: Plazma 3DS Tweaks
+Suite: stable
+Version: 1.0
+Description: A collection of soft and sweet tweaks for your modded 3DS.
+Codename: 3ds
+Architectures: any
+Components: main
