@@ -4,7 +4,23 @@ Architecture: iphoneos-arm64
 Maintainer: Whynotplazmaa
 Installed-Size: 184
 Depends: mobilesubstrate, preferenceloader
-Filename: ./debs/com.whynotplazmaa.fakeclock_0.1.2_iphoneos-arm64.deb
+Filename: debs/com.whynotplazmaa.fakeclock_0.1.2_iphoneos-arm64.deb
+Size: 5914
+MD5sum: a591f9e632cb57f9cf848d0b428242b6
+SHA1: 474dad8a1e9941b9f62ed483114338c078daa2f2
+SHA256: 8c59081918858bd2e9159f005d6f1b251938c2fdf734d2d35af408bd54b85f40
+Section: Tweaks
+Description: Sets the lock screen and status bar clock to a custom number.
+Author: Whynotplazmaa
+Name: FakeClock
+
+Package: com.whynotplazmaa.fakeclock
+Version: 0.1.1
+Architecture: iphoneos-arm64
+Maintainer: Whynotplazmaa
+Installed-Size: 184
+Depends: mobilesubstrate, preferenceloader
+Filename: debs/com.whynotplazmaa.fakeclock_0.1.2_iphoneos-arm64 (1).deb
 Size: 5914
 MD5sum: a591f9e632cb57f9cf848d0b428242b6
 SHA1: 474dad8a1e9941b9f62ed483114338c078daa2f2
@@ -20,7 +36,7 @@ Architecture: iphoneos-arm64
 Maintainer: whynotplazmaa
 Installed-Size: 428
 Depends: mobilesubstrate, firmware (>= 15.0), preferenceloader
-Filename: ./debs/com.whynotplazmaa.standby_1.0.0-4+debug_iphoneos-arm64.deb
+Filename: debs/com.whynotplazmaa.standby_1.0.0-4+debug_iphoneos-arm64.deb
 Size: 11652
 MD5sum: ad54743947eb6450520824e1eddc9523
 SHA1: d086bfb43f98d7f642c72a8dd2a2ffd61d268598
