@@ -1,0 +1,36 @@
+name: update da repo
+
+on:
+  push:
+    branches:
+      - main 
+    paths:
+      - 'ios/debs/**'  # Triggers only when a new .deb is added to ios/debs
+
+jobs:
+  update-index:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4 
+
+      - name: Install dpkg-dev
+        run: sudo apt-get install -y dpkg-dev bzip2
+
+      - name: Scan Packages
+        run: |
+          # Move into the folder where the repo files actually live
+          cd ios
+          # Scan the debs folder and create the index
+          dpkg-scanpackages -m debs /dev/null > Packages
+          # Compress the index for Cydia/Zebra compatibility
+          bzip2 -fks Packages
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "PlazmaBot"
+          git config --global user.email "bot@plazma.com"
+          # Explicitly add the files inside the /ios folder
+          git add ios/Packages ios/Packages.bz2
+          git commit -m "Auto-update Plazma Repo index" || echo "nah yall dont have any changes to commit"
+          git push
