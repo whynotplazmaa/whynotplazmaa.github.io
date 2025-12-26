@@ -46,3 +46,17 @@ Description: iOS 17 style StandBy mode for iPhone 7 Plus.
 Author: whynotplazmaa
 Name: StandBy
 
+Package: com.whynotplazmaa.test
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: Whynotplazmaa
+Filename: debs/plazma-test.deb
+Size: 524
+MD5sum: de8a2c831b79bb4cae9cd669aaaa4f2b
+SHA1: fd7e603ae601cdace321070e8bf7247b96f1ee26
+SHA256: 0df3f435bc5b0c8ccda8ac5b3376fdb8b925a9fb7696c6fb13baae48ddba49d2
+Section: Utilities
+Description: Dummy package for Plazma Auto-Manager test.
+Author: Whynotplazmaa
+Name: Plazma Repo Test
+
