@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plazma CM2 Generators</title>
     <style>
-       
         body {
             background-color: #FFF0F5; 
             color: #333;
@@ -13,13 +12,11 @@
             margin: 0;
             padding: 0;
         }
-
         .container {
             max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
         }
-
         .header {
             text-align: center;
             padding: 20px 0;
@@ -27,12 +24,10 @@
             font-weight: bold;
             color: #FF69B4; 
         }
-
         .search-container {
             text-align: center;
             margin-bottom: 30px;
         }
-
         .search-input {
             width: 80%;
             max-width: 400px;
@@ -42,14 +37,12 @@
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             font-size: 1rem;
         }
-
         .main-content {
             background: #FFFFFF;
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
-
         .section-header {
             font-size: 1.2rem;
             font-weight: 600;
@@ -58,15 +51,12 @@
             border-bottom: 1px solid #eee;
             padding-bottom: 10px;
         }
-
-        
         .card-grid {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
             justify-content: center; 
         }
-
         .card {
             background: #fdfdfd;
             padding: 15px;
@@ -76,25 +66,21 @@
             max-width: 500px; 
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
-
         .card-title {
             font-weight: bold;
             font-size: 1rem;
             margin-bottom: 5px;
         }
-
         .card-version {
             font-size: 0.8rem;
             color: #999;
             margin-bottom: 10px;
         }
-
         .card-description {
             font-size: 0.9rem;
             color: #555;
             margin-bottom: 15px;
         }
-
         .get-button {
             background-color: #FF69B4;
             color: white;
@@ -108,11 +94,9 @@
             border: none;
             transition: background-color 0.2s;
         }
-
         .get-button:hover {
             background-color: #ff4a9e;
         }
-
         .generator-output {
             margin-top: 15px;
             background: #f0f0f0;
@@ -137,44 +121,34 @@
     <div class="section-header">Generator Suite</div>
     
     <div class="card-grid">
-        
         <div class="card">
             <div class="card-title">Text Generator</div>
-            <div class="card-version">Version: 1.0.0</div>
+            <div class="card-version">Version: 1.0.1</div>
             <div class="card-description">Convert text into a CM2 circuit string instantly.</div>
-            <input type="text" id="textInput" placeholder="Enter text..." style="margin-bottom: 10px;">
+            <input type="text" id="textInput" placeholder="Enter text..." style="margin-bottom: 10px; width: 100%; box-sizing: border-box; padding: 5px;">
             <button class="get-button" onclick="generateText()">GENERATE</button>
             <div id="textOutput" class="generator-output"></div>
         </div>
-        
-        
-
     </div>
 </div>
 
 <script>
-    
     function generateText() {
         const text = document.getElementById('textInput').value;
         const outputDiv = document.getElementById('textOutput');
-        const BLOCK_ID = 11; 
-        const STATE = 0;
-        const Y = 0;
-        const Z = 0;
-        let circuitString = "";
+        const BLOCK_ID = 13; 
+        let blocks = [];
 
         for (let i = 0; i < text.length; i++) {
-            let ascii = text.charCodeAt(i);
-            if (ascii > 127) ascii = 63;
-            
-            circuitString += `${BLOCK_ID},${STATE},${i},${Y},${Z},${ascii};`;
+            let char = text[i];
+            blocks.push(`${BLOCK_ID},0,${i},0,0,${char}`);
         }
         
-        const finalString = circuitString + "?";
+        const finalString = blocks.join(';') + ";??";
         outputDiv.innerText = finalString;
         outputDiv.style.display = 'block';
+        
         navigator.clipboard.writeText(finalString);
-       
         alert("stwing is copied to clippyboard owo~");
     }
 </script>
