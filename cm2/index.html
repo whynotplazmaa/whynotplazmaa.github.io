@@ -64,7 +64,7 @@
             border: 1px solid #eee;
             flex: 1 1 100%; 
             max-width: 500px; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            box-shadow: 0 2 p x 5 p x r g b a ( 0 , 0 , 0 , 0 . 0 5 ) ;
         }
         .card-title {
             font-weight: bold;
@@ -123,7 +123,7 @@
     <div class="card-grid">
         <div class="card">
             <div class="card-title">Text Generator</div>
-            <div class="card-version">Version: 1.0.1</div>
+            <div class="card-version">Version: 1.0.2</div>
             <div class="card-description">Convert text into a CM2 circuit string instantly.</div>
             <input type="text" id="textInput" placeholder="Enter text..." style="margin-bottom: 10px; width: 100%; box-sizing: border-box; padding: 5px;">
             <button class="get-button" onclick="generateText()">GENERATE</button>
@@ -134,17 +134,21 @@
 
 <script>
     function generateText() {
-        const text = document.getElementById('textInput').value;
+        const text = document.getElementById('textInput').value.toUpperCase();
         const outputDiv = document.getElementById('textOutput');
-        const BLOCK_ID = 13; 
+        const BLOCK_ID = 13;
         let blocks = [];
+        const length = text.length;
+        const startX = -Math.floor(length / 2);
 
-        for (let i = 0; i < text.length; i++) {
-            let char = text[i];
-            blocks.push(`${BLOCK_ID},0,${i},0,0,${char}`);
+        for (let i = 0; i < length; i++) {
+            let ascii = text.charCodeAt(i);
+            if (ascii > 127) ascii = 63;
+            const xCoord = startX + i;
+            blocks.push(`${BLOCK_ID},0,${xCoord},0,0,${ascii}`);
         }
         
-        const finalString = blocks.join(';') + ";??";
+        const finalString = blocks.join(';') + "???";
         outputDiv.innerText = finalString;
         outputDiv.style.display = 'block';
         
