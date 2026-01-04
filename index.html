@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhyNotPlazmaa Repositories</title>
+    <style>
+        
+        body {
+            background-color: #FFF0F5; 
+            color: #333;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        
+        .header {
+            text-align: center;
+            padding: 30px 0;
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #333;
+            background-color: #FFFFFF;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .header span {
+            color: #FF69B4;
+        }
+
+        
+        .main-content {
+            background: #FFFFFF;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .section-header {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        
+        .repo-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .card {
+            background: #fdfdfd;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #eee;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+        }
+
+        .card-info {
+            text-align: left;
+        }
+
+        .card-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #FF69B4;
+        }
+
+        .card-description {
+            font-size: 0.9rem;
+            color: #555;
+            margin-top: 5px;
+        }
+        .visit-button {
+            background-color: #FF69B4;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        whynotplazmaa<span>.github.io</span>
+    </div>
+
+    <div class="main-content">
+        <div class="section-header">My Projects & Repositories</div>
+        
+        <div class="repo-list">
+          
+            <div class="card" onclick="visitRepo('ios')">
+                <div class="card-info">
+                    <div class="card-title">iOS Repo</div>
+                    <div class="card-description">My collection of jailbreak tweaks and utilities.</div>
+                </div>
+                <a href="/ios" class="visit-button">VISIT</a>
+            </div>
+
+            
+            <div class="card" onclick="visitRepo('cm2')">
+                <div class="card-info">
+                    <div class="card-title">Circuit Maker 2 Tools</div>
+                    <div class="card-description">Web generators for Roblox CM2 save strings (Text/Images).</div>
+                </div>
+                <a href="/cm2" class="visit-button">VISIT</a>
+            </div>
+
+            
+            <div class="card" onclick="visitRepo('3ds')">
+                <div class="card-info">
+                    <div class="card-title">3DS Homebrew</div>
+                    <div class="card-description">Utilities and resources for Nintendo 3DS modding.</div>
+                </div>
+                <a href="/3ds" class="visit-button">VISIT</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    
+    function visitRepo(repoName) {
+       
+        window.location.href = `/${repoName}`;
+    }
+</script>
+
+</body>
+</html>
