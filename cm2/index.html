@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plazma CM2 Generators</title>
     <style>
-        
-
+        /* General Theme: Light pink background, white cards, hot pink accents */
         body {
             background-color: #FFF0F5; 
             color: #333;
@@ -21,7 +20,6 @@
             padding: 20px;
         }
 
-       
         .header {
             text-align: center;
             padding: 20px 0;
@@ -30,7 +28,6 @@
             color: #FF69B4; 
         }
 
-       
         .search-container {
             text-align: center;
             margin-bottom: 30px;
@@ -46,7 +43,6 @@
             font-size: 1rem;
         }
 
-       
         .main-content {
             background: #FFFFFF;
             padding: 20px;
@@ -54,7 +50,6 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
 
-        
         .section-header {
             font-size: 1.2rem;
             font-weight: 600;
@@ -64,12 +59,12 @@
             padding-bottom: 10px;
         }
 
-       
+        /* The card grid now only needs to display a single card neatly */
         .card-grid {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-            justify-content: flex-start;
+            justify-content: center; /* Center the single card */
         }
 
         .card {
@@ -77,9 +72,9 @@
             padding: 15px;
             border-radius: 10px;
             border: 1px solid #eee;
-            flex: 1 1 calc(50% - 20px);
+            flex: 1 1 100%; /* Card takes full width now */
+            max-width: 500px; /* Optional: Keep card from getting too wide on huge screens */
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            min-width: 200px;
         }
 
         .card-title {
@@ -100,7 +95,6 @@
             margin-bottom: 15px;
         }
 
-        
         .get-button {
             background-color: #FF69B4;
             color: white;
@@ -119,7 +113,6 @@
             background-color: #ff4a9e;
         }
 
-        
         .generator-output {
             margin-top: 15px;
             background: #f0f0f0;
@@ -144,7 +137,7 @@
     <div class="section-header">Generator Suite</div>
     
     <div class="card-grid">
-        
+        <!-- Text Generator Card -->
         <div class="card">
             <div class="card-title">Text Generator</div>
             <div class="card-version">Version: 1.0.0</div>
@@ -153,34 +146,36 @@
             <button class="get-button" onclick="generateText()">GENERATE</button>
             <div id="textOutput" class="generator-output"></div>
         </div>
-
         
-        <div class="card">
-            <div class="card-title">Image Generator</div>
-            <div class="card-version">Version: 0.1 Beta</div>
-            <div class="card-description">Convert small B&W images into CM2 pixel art circuits.</div>
-            <button class="get-button">UPLOAD IMAGE (Coming Soon)</button>
-        </div>
+        <!-- The Image Generator card was removed from here -->
+
     </div>
 </div>
 
 <script>
-    
+    /* CORRECTED SCRIPT - Updated to use Block ID 11 */
     function generateText() {
         const text = document.getElementById('textInput').value;
         const outputDiv = document.getElementById('textOutput');
-        const BLOCK_ID = 13; 
+        const BLOCK_ID = 11; // Changed from 13 to 11
+        const STATE = 0;
+        const Y = 0;
+        const Z = 0;
         let circuitString = "";
 
         for (let i = 0; i < text.length; i++) {
             let ascii = text.charCodeAt(i);
-            circuitString += `${BLOCK_ID},0,${i},0,0,${ascii};`;
+            if (ascii > 127) ascii = 63; // '?'
+            // Correct Format: ID,STATE,X,Y,Z,ASCII_PROPERTY;
+            circuitString += `${BLOCK_ID},${STATE},${i},${Y},${Z},${ascii};`;
         }
         
-        outputDiv.innerText = circuitString + "?";
+        const finalString = circuitString + "?";
+        outputDiv.innerText = finalString;
         outputDiv.style.display = 'block';
-        navigator.clipboard.writeText(circuitString + "?");
-        alert("Generated string copied to clipboard!");
+        navigator.clipboard.writeText(finalString);
+        // Alert is good confirmation for the user
+        alert("Generated string copied to clipboard! This should now work correctly.");
     }
 </script>
 
