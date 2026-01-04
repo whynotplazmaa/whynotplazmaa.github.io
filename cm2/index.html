@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plazma CM2 Generators</title>
     <style>
-        /* General Theme: Light pink background, white cards, hot pink accents */
+       
         body {
             background-color: #FFF0F5; 
             color: #333;
@@ -59,12 +59,12 @@
             padding-bottom: 10px;
         }
 
-        /* The card grid now only needs to display a single card neatly */
+        
         .card-grid {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-            justify-content: center; /* Center the single card */
+            justify-content: center; 
         }
 
         .card {
@@ -72,8 +72,8 @@
             padding: 15px;
             border-radius: 10px;
             border: 1px solid #eee;
-            flex: 1 1 100%; /* Card takes full width now */
-            max-width: 500px; /* Optional: Keep card from getting too wide on huge screens */
+            flex: 1 1 100%; 
+            max-width: 500px; 
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
@@ -137,7 +137,7 @@
     <div class="section-header">Generator Suite</div>
     
     <div class="card-grid">
-        <!-- Text Generator Card -->
+        
         <div class="card">
             <div class="card-title">Text Generator</div>
             <div class="card-version">Version: 1.0.0</div>
@@ -147,17 +147,17 @@
             <div id="textOutput" class="generator-output"></div>
         </div>
         
-        <!-- The Image Generator card was removed from here -->
+        
 
     </div>
 </div>
 
 <script>
-    /* CORRECTED SCRIPT - Updated to use Block ID 11 */
+    
     function generateText() {
         const text = document.getElementById('textInput').value;
         const outputDiv = document.getElementById('textOutput');
-        const BLOCK_ID = 11; // Changed from 13 to 11
+        const BLOCK_ID = 11; 
         const STATE = 0;
         const Y = 0;
         const Z = 0;
@@ -165,8 +165,8 @@
 
         for (let i = 0; i < text.length; i++) {
             let ascii = text.charCodeAt(i);
-            if (ascii > 127) ascii = 63; // '?'
-            // Correct Format: ID,STATE,X,Y,Z,ASCII_PROPERTY;
+            if (ascii > 127) ascii = 63;
+            
             circuitString += `${BLOCK_ID},${STATE},${i},${Y},${Z},${ascii};`;
         }
         
@@ -174,8 +174,8 @@
         outputDiv.innerText = finalString;
         outputDiv.style.display = 'block';
         navigator.clipboard.writeText(finalString);
-        // Alert is good confirmation for the user
-        alert("Generated string copied to clipboard! This should now work correctly.");
+       
+        alert("stwing is copied to clippyboard owo~");
     }
 </script>
 
