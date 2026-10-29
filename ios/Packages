@@ -1,3 +1,17 @@
+Package: com.whynotplazmaa.deca
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: whynotplazmaa
+Filename: debs/com.whynotplazmaa.deca_0.0.1_iphoneos-arm64.deb
+Size: 14694
+MD5sum: 7e8d485bffe1a0b5d1656e713983d70e
+SHA1: e22de6aab172f99d020e35e7f570d628187e1fbf
+SHA256: 17e86b546a0b1bab532da2f6878b9b2e1beb95d1c178cb782b00ce945db1730b
+Section: Applications
+Description: lightweight package manager for ios 10.2.1
+Author: whynotplazmaa
+Name: Deca
+
 Package: com.whynotplazmaa.fakeclock
 Version: 0.1.1
 Architecture: iphoneos-arm64
