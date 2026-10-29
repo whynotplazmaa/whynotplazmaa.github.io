@@ -2,11 +2,11 @@ Package: com.whynotplazmaa.deca
 Version: 1.0.0
 Architecture: iphoneos-arm
 Maintainer: whynotplazmaa
-Filename: debs/com.whynotplazmaa.deca_0.0.1_iphoneos-arm64.deb
-Size: 14694
-MD5sum: 7e8d485bffe1a0b5d1656e713983d70e
-SHA1: e22de6aab172f99d020e35e7f570d628187e1fbf
-SHA256: 17e86b546a0b1bab532da2f6878b9b2e1beb95d1c178cb782b00ce945db1730b
+Filename: debs/com.whynotplazma.deca_0.0.1_iphoneos-arm64.deb
+Size: 21072
+MD5sum: 0eaa1e477a068feb9edbddb9268e2925
+SHA1: 76208b6a89141953ebcab5756c31edd3f483193e
+SHA256: d1abc38a5d8a1a0ae45fe99ec59ed6aa3b4011c8d15593e36fd6d5985480185c
 Section: Applications
 Description: lightweight package manager for ios 10.2.1
 Author: whynotplazmaa
