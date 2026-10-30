@@ -1,24 +1,9 @@
 Package: com.whynotplazmaa.deca
 Version: 1.0.0
-Architecture: iphoneos-arm64
-Maintainer: whynotplazmaa
-Depends: firmware (>= 10.0), dpkg
-Filename: debs/Deca-rootless.deb
-Size: 89320
-MD5sum: 25724810f9e70f92e84032b9dcf2ce31
-SHA1: 581d43b30d1bba3c34bb7d4223b59ca6409993da
-SHA256: 1d046feeb4ea57811df3703f8e4cf33d66d2d9c45aa3b71cb0655d11b017fed3
-Section: Applications
-Description: Lightweight 64-bit APT & dpkg package manager for iOS 10-15 (Rootful & Rootless).
-Author: whynotplazmaa
-Name: Deca
-
-Package: com.whynotplazmaa.deca
-Version: 1.0.0
 Architecture: iphoneos-arm
 Maintainer: whynotplazmaa
 Depends: firmware (>= 10.0), dpkg
-Filename: debs/Deca-rootful.deb
+Filename: debs/Deca.deb
 Size: 89420
 MD5sum: ce72b82642d0a0b7fc21516712c62e4c
 SHA1: efb17ae9c86a54e49531d2b5c40e904a13fd5433
