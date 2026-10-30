@@ -19,11 +19,70 @@ jobs:
 
       - name: Scan Packages
         run: |
-          # Move into the folder where the repo files actually live
           cd ios
-          # Scan the debs folder and create the index
-          dpkg-scanpackages -m debs /dev/null > Packages
-          # Compress the index for Cydia/Zebra compatibility
+          
+          # 1. Generate the initial raw package structure
+          dpkg-scanpackages -m debs /dev/null > Packages.raw
+          
+          # 2. Extract, track, and bump versions matching existing elements
+          if [ -f "Packages" ]; then
+            touch Packages.new
+            
+            # Use awk to iterate over each raw chunk block
+            awk -v RS="" -v FS="\n" '
+            NR==FNR {
+              # First pass: parse existing local production indexes
+              split($0, lines, "\n")
+              pkg=""
+              ver=""
+              for (i in lines) {
+                if (lines[i] ~ /^Package:/) { pkg = substr(lines[i], 10) }
+                if (lines[i] ~ /^Version:/) { ver = substr(lines[i], 10) }
+              }
+              if (pkg != "") { old_versions[pkg] = ver }
+              next
+            }
+            {
+              # Second pass: compute updates against raw inputs
+              split($0, lines, "\n")
+              pkg=""
+              ver_idx=0
+              for (i in lines) {
+                if (lines[i] ~ /^Package:/) { pkg = substr(lines[i], 10) }
+                if (lines[i] ~ /^Version:/) { ver_idx = i }
+              }
+              
+              # If package existed before, overwrite the version metadata line string
+              if (pkg in old_versions) {
+                old_ver = old_versions[pkg]
+                
+                # Simple extraction parsing looking for trailing numerals (e.g. 1.0.1 -> 1.0.2)
+                if (old_ver ~ /[0-9]+$/) {
+                  match(old_ver, /[0-9]+$/)
+                  suffix = substr(old_ver, RSTART, RLENGTH)
+                  prefix = substr(old_ver, 1, RSTART-1)
+                  new_ver = prefix (suffix + 1)
+                } else {
+                  new_ver = old_ver ".1"
+                }
+                lines[ver_idx] = "Version: " new_ver
+              }
+              
+              # Reassemble clean text payload layout 
+              for (i=1; i<=length(lines); i++) {
+                print lines[i]
+              }
+              print ""
+            }' Packages Packages.raw > Packages.new
+            
+            mv Packages.new Packages
+            rm Packages.raw
+          else
+            # Fallback if Packages did not exist yet locally
+            mv Packages.raw Packages
+          fi
+          
+          # 3. Compress the fixed index for Cydia/Zebra compatibility
           bzip2 -fks Packages
 
       - name: Commit and Push Changes
@@ -32,5 +91,5 @@ jobs:
           git config --global user.email "bot@plazma.com"
           # Explicitly add the files inside the /ios folder
           git add ios/Packages ios/Packages.bz2
-          git commit -m "Auto-update Plazma Repo index" || echo "nah yall dont have any changes to commit"
+          git commit -m "Auto-update Plazma Repo index [skip ci]" || echo "nah yall dont have any changes to commit"
           git push
