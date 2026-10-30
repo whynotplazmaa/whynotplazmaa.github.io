@@ -1,20 +1,20 @@
 Package: com.whynotplazmaa.deca
-Version: 1.0.0
+Version: 1.0.1
 Architecture: iphoneos-arm
 Maintainer: whynotplazmaa
 Depends: firmware (>= 10.0), dpkg
 Filename: debs/Deca.deb
-Size: 94392
-MD5sum: 3a3d19203a1bfab9b76491f307c914c1
-SHA1: 0c1eb589fb7d9f38a1e772585c004fd7610c9c46
-SHA256: eae2808f01143c2ba038087f375e5d6119118afca59f8e165266afa3f1dd39f6
+Size: 97852
+MD5sum: 0b042bfd8c5e85bcbe0899f73c51c28e
+SHA1: d3447231b1c7f98fd657ff8e59051f6093b51f6c
+SHA256: aa7d0d80d52978aa8e8379acd1ced1fff9f3c03f9629f47a18378e6b37a6fdf3
 Section: Applications
 Description: Lightweight 64-bit APT & dpkg package manager for iOS 10-15 (Rootful & Rootless).
 Author: whynotplazmaa
 Name: Deca
 
 Package: com.whynotplazmaa.fakeclock
-Version: 0.1.1
+Version: 0.1.2
 Architecture: iphoneos-arm64
 Maintainer: Whynotplazmaa
 Installed-Size: 184
@@ -30,7 +30,7 @@ Author: Whynotplazmaa
 Name: FakeClock
 
 Package: com.whynotplazmaa.fakeclock
-Version: 0.1.1
+Version: 0.1.2
 Architecture: iphoneos-arm64
 Maintainer: Whynotplazmaa
 Installed-Size: 184
@@ -46,7 +46,7 @@ Author: Whynotplazmaa
 Name: FakeClock
 
 Package: com.whynotplazmaa.standby
-Version: 1.0.0-4+debug
+Version: 1.0.0-4+debug.1
 Architecture: iphoneos-arm64
 Maintainer: whynotplazmaa
 Installed-Size: 428
@@ -62,7 +62,7 @@ Author: whynotplazmaa
 Name: StandBy
 
 Package: com.whynotplazmaa.test
-Version: 1.0.0
+Version: 1.0.1
 Architecture: iphoneos-arm
 Maintainer: Whynotplazmaa
 Filename: debs/plazma-test.deb
