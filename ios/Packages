@@ -1,15 +1,31 @@
-Package: com.whynotplazmaa.deca
+Package: com.deca.pkgmgr
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: Deca Team
+Depends: firmware (>= 10.0), dpkg
+Filename: debs/Deca-rootless.deb
+Size: 88802
+MD5sum: 48cc3ca5641c623f370865ead92e7c48
+SHA1: 5ef617892c96f5c618ee4157a0e66cf5c8fac575
+SHA256: 94d0eeff49a0e30225dd3f812fabdeaebf5a3770fb6274e9a1eacd3c4dff65ec
+Section: Packaging
+Description: Lightweight 64-bit APT & dpkg package manager for iOS 10-15 (Rootful & Rootless).
+Author: Deca Team
+Name: Deca
+
+Package: com.deca.pkgmgr
 Version: 1.0.0
 Architecture: iphoneos-arm
-Maintainer: whynotplazmaa
-Filename: debs/com.whynotplazmaa.deca_0.0.2_iphoneos-arm64.deb
-Size: 23198
-MD5sum: fac97c965fa4713e56b17ac89bdeb06d
-SHA1: f5630efc07354b9af3c6fb4ed49c5c0fa3bf8c9d
-SHA256: 7ae2dd339d88545ced8c68cf2c9d98831b4c637f5b591559165dba5db58293a3
-Section: Applications
-Description: lightweight package manager for ios 10.2.1
-Author: whynotplazmaa
+Maintainer: Deca Team
+Depends: firmware (>= 10.0), dpkg
+Filename: debs/Deca-rootful.deb
+Size: 88970
+MD5sum: c5692fa2cc7b62dc678e8e9f66761bd2
+SHA1: 860d65a5079c6595f2dadeb818d9089ae535884e
+SHA256: bee449dedcd34edfb95204f26c58468cf2a24e25fe8c44746bad0ff051b05eb9
+Section: Packaging
+Description: Lightweight 64-bit APT & dpkg package manager for iOS 10-15 (Rootful & Rootless).
+Author: Deca Team
 Name: Deca
 
 Package: com.whynotplazmaa.fakeclock
