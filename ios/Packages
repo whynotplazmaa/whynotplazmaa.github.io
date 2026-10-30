@@ -4,10 +4,10 @@ Architecture: iphoneos-arm
 Maintainer: whynotplazmaa
 Depends: firmware (>= 10.0), dpkg
 Filename: debs/Deca.deb
-Size: 89420
-MD5sum: ce72b82642d0a0b7fc21516712c62e4c
-SHA1: efb17ae9c86a54e49531d2b5c40e904a13fd5433
-SHA256: 3ff328339130950da1e3e5e8378b57b13c1ee5a078d3b078cc770885904aa6ac
+Size: 94392
+MD5sum: 3a3d19203a1bfab9b76491f307c914c1
+SHA1: 0c1eb589fb7d9f38a1e772585c004fd7610c9c46
+SHA256: eae2808f01143c2ba038087f375e5d6119118afca59f8e165266afa3f1dd39f6
 Section: Applications
 Description: Lightweight 64-bit APT & dpkg package manager for iOS 10-15 (Rootful & Rootless).
 Author: whynotplazmaa
